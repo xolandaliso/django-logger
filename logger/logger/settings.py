@@ -1,10 +1,10 @@
-
+import os
 from pathlib import Path
 
 # build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
+print('b_dir',BASE_DIR)
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-ia^&q%p0-k)*kvjy1ve3yr0j4_q)rdpg#6i(0j713zg%d_5+q@'
@@ -15,22 +15,24 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
+# application definition
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crispy_bootstrap4'
+    'django.contrib.contenttypes',
+    'logger',
+    'tickets',
     'crispy_forms',
-    'tickets'
-    
+    'crispy_bootstrap4',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -47,7 +49,7 @@ ROOT_URLCONF = 'logger.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'tickets', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

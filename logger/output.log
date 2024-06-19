@@ -1,0 +1,1998 @@
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.8/3.8.19/Frameworks/Python.framework/Versions/3.8/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/opt/homebrew/Cellar/python@3.8/3.8.19/Frameworks/Python.framework/Versions/3.8/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/management/base.py", line 485, in check
+    all_issues = checks.run_checks(
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 495, in check
+    messages.extend(check_resolver(pattern))
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 496, in check
+    messages.extend(self._check_custom_error_handlers())
+  File "/Users/xola/Documents/work/tad/projects/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 514, in _check_custom_error_handlers
+    signature = inspect.signature(handler)
+  File "/opt/homebrew/Cellar/python@3.8/3.8.19/Frameworks/Python.framework/Versions/3.8/lib/python3.8/inspect.py", line 3105, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/opt/homebrew/Cellar/python@3.8/3.8.19/Frameworks/Python.framework/Versions/3.8/lib/python3.8/inspect.py", line 2854, in from_callable
+    return _signature_from_callable(obj, sigcls=cls,
+  File "/opt/homebrew/Cellar/python@3.8/3.8.19/Frameworks/Python.framework/Versions/3.8/lib/python3.8/inspect.py", line 2304, in _signature_from_callable
+    return _signature_from_function(sigcls, obj,
+  File "/opt/homebrew/Cellar/python@3.8/3.8.19/Frameworks/Python.framework/Versions/3.8/lib/python3.8/inspect.py", line 2168, in _signature_from_function
+    parameters.append(Parameter(name, annotation=annotation,
+  File "/opt/homebrew/Cellar/python@3.8/3.8.19/Frameworks/Python.framework/Versions/3.8/lib/python3.8/inspect.py", line 2491, in __init__
+    self._kind = _ParameterKind(kind)
+  File "/opt/homebrew/Cellar/python@3.8/3.8.19/Frameworks/Python.framework/Versions/3.8/lib/python3.8/enum.py", line 339, in __call__
+    return cls.__new__(cls, value)
+  File "/opt/homebrew/Cellar/python@3.8/3.8.19/Frameworks/Python.framework/Versions/3.8/lib/python3.8/enum.py", line 635, in __new__
+    if type(value) is cls:
+RecursionError: maximum recursion depth exceeded while calling a Python object

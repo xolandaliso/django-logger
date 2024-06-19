@@ -1,0 +1,19 @@
+<!-- create_ticket.html -->
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Ticket</title>
+</head>
+<body>
+    <h2>Create Ticket</h2>
+    <form method="post">
+        
+        {% csrf_token %}
+        {{ form|crispy }}
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

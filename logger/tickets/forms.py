@@ -1,3 +1,4 @@
+
 from django import forms
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
@@ -10,8 +11,7 @@ class CustomUserForm(forms.ModelForm):
     class Meta:
         model = CustomUser
         fields = [ 
-                    'username', 'password', 'email', \
-                         'phone', 'pbx_extension', 'is_active' ]
+                    'username', 'password', 'email', 'phone', 'pbx_extension', 'is_active' ]
 
     def __init__(self, *args, **kwargs):
         super(CustomUserForm, self).__init__(*args, **kwargs)
@@ -44,13 +44,16 @@ class EmployeeForm(forms.ModelForm):
 class TicketForm(forms.ModelForm):
     class Meta:
         model = Ticket
-        fields = ['request_user', 'employee', 'ticket_description', 'ticket_type', 'ticket_resolution', 'ticket_status', 'location']
+        fields = [
+                    'request_user', 'employee', 'ticket_description', 'ticket_type',\
+                         'ticket_resolution', 'ticket_status', 'location' ]
 
     def __init__(self, *args, **kwargs):
         super(TicketForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.form_method = 'post'
         self.helper.add_input(Submit('submit', 'Submit'))
+
 
 class TicketCommentsForm(forms.ModelForm):
     class Meta:
@@ -63,6 +66,7 @@ class TicketCommentsForm(forms.ModelForm):
         self.helper.form_method = 'post'
         self.helper.add_input(Submit('submit', 'Submit'))
 
+
 class DocumentsForm(forms.ModelForm):
     class Meta:
         model = Documents
@@ -72,57 +76,19 @@ class DocumentsForm(forms.ModelForm):
         super(DocumentsForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.form_method = 'post'
-        self.helper.add_input(Submit('submit', 'Submit'))
+        self.helper.add_input( Submit('submit', 'Submit') )
 
 
 class RecurringTicketForm(forms.ModelForm):
     class Meta:
         model = RecurringTicket
-        fields = ['recurring_description', 'frequency', 'employee', 'custom_interval', 'custom_unit', 'next_run']
+        fields = [
+                    'recurring_description', 'frequency', 'employee',\
+                        'custom_interval', 'custom_unit', 'next_run' ]
 
     def __init__(self, *args, **kwargs):
         super(RecurringTicketForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.form_method = 'post'
-        self.helper.add_input(Submit('submit', 'Submit'))
+        self.helper.add_input( Submit('submit', 'Submit') )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-    favorite_food = forms.CharField(
-        label = "What is your favorite food?",
-        max_length = 80,
-        required = True,
-    )
-
-    favorite_color = forms.CharField(
-        label = "What is your favorite color?",
-        max_length = 80,
-        required = True,
-    )
-
-    favorite_number = forms.IntegerField(
-        label = "no label",
-        required = False,
-    )
-
-    notes = forms.CharField(
-        label = "Additional notes or feedback",
-        required = False,
-    )
-'''
