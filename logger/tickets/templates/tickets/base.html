@@ -6,13 +6,23 @@
     <title>{% block title %}Ticket Tracking Platform{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     {% block extra_head %}{% endblock %}
+    {% load static %}
+
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light grey background color */
+        }
+    </style>
 </head>
 <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'landing' %}">Ticket Tracking Platform</a>
+            <a class="navbar-brand d-flex align-items-center" href="{% url 'landing' %}" style="color: dimgrey;">
+                <img src="{% static 'img/2aday-circle.png' %}" alt="Company Logo" height="70" class="mr-2">
+                Ticket Tracking Portal
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -21,10 +31,10 @@
                 <ul class="navbar-nav">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'create_ticket' %}">Create Ticket</a>
+                        <span class="nav-link">Welcome, {{ user.username }}</span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'manage_tickets' %}">Manage Tickets</a>
+                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
@@ -40,7 +50,7 @@
     </nav>
 
     {% block content %}
-    <!--linking other pages here -->
+    <!-- Linking other pages here -->
     {% endblock %}
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

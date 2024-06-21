@@ -1,94 +1,57 @@
-
+from dataclasses import fields
 from django import forms
+from django.contrib.auth.forms import UserCreationForm
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Submit
-from .models import (
-    CustomUser, Department, Employee, Type, Resolution, Status, Location, 
-    Ticket, TicketComments, Documents, RecurringTicket
-)
+from crispy_forms.layout import Layout, Submit, Field
+from .models import CustomUser, Department, Ticket, Employee, Documents, Location, Type
 
-class CustomUserForm(forms.ModelForm):
-    class Meta:
+class CustomUserForm(UserCreationForm):
+    class Meta(UserCreationForm.Meta):
+
         model = CustomUser
-        fields = [ 
-                    'username', 'password', 'email', 'phone', 'pbx_extension', 'is_active' ]
+        
+        fields = [
+                    'first_name', 'last_name', 'username', 'email', 'phone', 'pbx_extension', 'is_active' ]
 
     def __init__(self, *args, **kwargs):
         super(CustomUserForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.form_method = 'post'
-        self.helper.add_input(Submit('submit', 'Submit'))
+        self.helper.add_input(Submit('submit', 'Register', css_class='btn-primary'))
+        self.helper.layout = Layout(
+            Field('first_name', css_class='form-control'),
+            Field('last_name',  css_class='form-control'),
+            Field('username', css_class='form-control'),
+            Field('email', css_class='form-control'),
+            Field('phone', css_class='form-control'),
+            Field('pbx_extension', css_class='form-control'),
+        )
 
-class DepartmentForm(forms.ModelForm):
-    class Meta:
-        model = Department
-        fields = ['department_name', 'employees']
-
-    def __init__(self, *args, **kwargs):
-        super(DepartmentForm, self).__init__(*args, **kwargs)
-        self.helper = FormHelper()
-        self.helper.form_method = 'post'
-        self.helper.add_input(Submit('submit', 'Submit'))
-    
-class EmployeeForm(forms.ModelForm):
-    class Meta:
-        model = Employee
-        fields = ['employee', 'department', 'role']
-
-    def __init__(self, *args, **kwargs):
-        super(EmployeeForm, self).__init__(*args, **kwargs)
-        self.helper = FormHelper()
-        self.helper.form_method = 'post'
-        self.helper.add_input(Submit('submit', 'Submit'))
+    def save(self, commit=True):
+        user = super(CustomUserForm, self).save(commit=False)
+        if commit:
+            user.save()
+        return user
 
 class TicketForm(forms.ModelForm):
+
     class Meta:
         model = Ticket
-        fields = [
-                    'request_user', 'employee', 'ticket_description', 'ticket_type',\
-                         'ticket_resolution', 'ticket_status', 'location' ]
+        fields = [ 
+                    'ticket_description', 'ticket_type', 'location', 'employee' ]
 
     def __init__(self, *args, **kwargs):
+        department = kwargs.pop('department', None)
         super(TicketForm, self).__init__(*args, **kwargs)
+        if department:
+            self.fields['employee'].queryset = Employee.objects.filter(department=department)
+            self.fields['ticket_type'].queryset = Type.objects.filter(department=department)
         self.helper = FormHelper()
         self.helper.form_method = 'post'
-        self.helper.add_input(Submit('submit', 'Submit'))
-
-
-class TicketCommentsForm(forms.ModelForm):
-    class Meta:
-        model = TicketComments
-        fields = ['ticket', 'user', 'comment']
-
-    def __init__(self, *args, **kwargs):
-        super(TicketCommentsForm, self).__init__(*args, **kwargs)
-        self.helper = FormHelper()
-        self.helper.form_method = 'post'
-        self.helper.add_input(Submit('submit', 'Submit'))
-
-
-class DocumentsForm(forms.ModelForm):
-    class Meta:
-        model = Documents
-        fields = ['ticket', 'document']
-
-    def __init__(self, *args, **kwargs):
-        super(DocumentsForm, self).__init__(*args, **kwargs)
-        self.helper = FormHelper()
-        self.helper.form_method = 'post'
-        self.helper.add_input( Submit('submit', 'Submit') )
-
-
-class RecurringTicketForm(forms.ModelForm):
-    class Meta:
-        model = RecurringTicket
-        fields = [
-                    'recurring_description', 'frequency', 'employee',\
-                        'custom_interval', 'custom_unit', 'next_run' ]
-
-    def __init__(self, *args, **kwargs):
-        super(RecurringTicketForm, self).__init__(*args, **kwargs)
-        self.helper = FormHelper()
-        self.helper.form_method = 'post'
-        self.helper.add_input( Submit('submit', 'Submit') )
-
+        self.helper.add_input(Submit('submit', 'Create Ticket', css_class='btn-primary'))
+        self.helper.layout = Layout(
+            Field('ticket_description', css_class='form-control'),
+            Field('ticket_type', css_class='form-control'),
+            Field('location', css_class='form-control'),
+            Field('employee', css_class='form-control'),
+        )

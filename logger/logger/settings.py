@@ -2,9 +2,8 @@ import os
 from pathlib import Path
 
 # build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
 
-print('b_dir',BASE_DIR)
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-ia^&q%p0-k)*kvjy1ve3yr0j4_q)rdpg#6i(0j713zg%d_5+q@'
@@ -14,9 +13,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # application definition
-
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -45,6 +42,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'logger.urls'
+LOGIN_REDIRECT_URL = 'home'
 
 TEMPLATES = [
     {
@@ -64,7 +62,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'logger.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -75,8 +72,10 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'tickets.CustomUser'
 
-# Password validation
+
+# password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -94,8 +93,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-# Internationalization
+# internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
@@ -106,13 +104,16 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
+# static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
 
-# Default primary key field type
+STATICFILES_DIRS = [
+    BASE_DIR / 'tickets/static',
+]
+
+# default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

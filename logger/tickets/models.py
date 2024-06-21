@@ -2,7 +2,7 @@
 
 from tracemalloc import stop
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, Group, Permission
 
 class TimeStampedModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
@@ -15,26 +15,34 @@ class CustomUser(AbstractUser, TimeStampedModel):
     phone = models.CharField(max_length=15, blank=True, null=True)
     pbx_extension = models.CharField(max_length=10, blank=True, null=True)
     is_active = models.BooleanField(default=True)
+
+    # adding groups for managing user permissions
+
     groups = models.ManyToManyField(
-        'auth.Group',
-        related_name='customuser_set',  # Set a unique related_name for the groups field
-        blank=True,
-        help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.',
-        verbose_name='groups',
-    )
+        Group,
+        related_name = 'customuser_group',  # set a unique related_name for the groups field
+        blank = True,
+        help_text = 'The groups this user belongs to.\
+                     A user will get all permissions granted \
+                    to each of their groups.',
+        verbose_name = 'groups',
+    )   
+
+    # to take care of the user permissions
+
     user_permissions = models.ManyToManyField(
-        'auth.Permission',
-        related_name='customuser_set',  # Set a unique related_name for the user_permissions field
-        blank=True,
-        help_text='Specific permissions for this user.',
-        verbose_name='user permissions',
+        Permission,
+        related_name = 'customuser_permissions', 
+        blank = True,
+        help_text = 'Specific permissions for this user.',
+        verbose_name = 'user permissions',
     )
 
     def __str__(self):
         return self.username 
-        
                
 class Department(TimeStampedModel):
+
     department_name = models.CharField(max_length=255)
     employees = models.ManyToManyField( 
                         'CustomUser', through='Employee', \
@@ -44,7 +52,6 @@ class Department(TimeStampedModel):
 
         return self.department_name
 
-   
 class Employee(TimeStampedModel):
     ROLE_CHOICES = [
         ('manager', 'Manager'),
@@ -53,7 +60,6 @@ class Employee(TimeStampedModel):
         # Add other roles as needed
     ]
    
-
     employee = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='employee_roles')
     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='department_employees')
     role = models.CharField(max_length=50, choices=ROLE_CHOICES)
@@ -64,18 +70,26 @@ class Employee(TimeStampedModel):
         
 class Type(models.Model):
     type_description = models.CharField(max_length=255)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='department_type')
+
 
     def __str__(self):
         return self.type_description
+        
 
 class Resolution(models.Model):
     resolution_description = models.CharField(max_length=255)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='department_resolution')
+
 
     def __str__(self):
         return self.resolution_description
 
 class Status(models.Model):
     status_description = models.CharField(max_length=255)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='department_status')
+
+
 
     def __str__(self):
         return self.status_description
@@ -92,14 +106,13 @@ class Ticket(TimeStampedModel):
     request_user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='requested_tickets')
     employee = models.ForeignKey(Employee, on_delete=models.CASCADE, related_name='assigned_tickets')
     ticket_description = models.TextField()
-    ticket_type = models.ForeignKey(Type, on_delete=models.CASCADE, related_name='tickets')
-    ticket_resolution = models.ForeignKey(Resolution, on_delete=models.CASCADE, related_name='tickets')
-    ticket_status = models.ForeignKey(Status, on_delete=models.CASCADE, related_name='tickets')
-    location = models.ForeignKey(Location, on_delete=models.CASCADE, related_name='tickets')
+    ticket_type = models.ForeignKey(Type, on_delete=models.CASCADE, related_name='tickets', null=True, blank=True)
+    #ticket_resolution = models.ForeignKey(Resolution, on_delete=models.CASCADE, related_name='tickets', null=True, blank=True)
+    #ticket_status = models.ForeignKey(Status, on_delete=models.CASCADE, related_name='tickets', null=True, blank=True)
+    location = models.ForeignKey(Location, on_delete=models.CASCADE, related_name='tickets', null=True, blank=True)
 
     def __str__(self):
-        return f"Ticket {self.id} by {self.request_user.username}"
-        #https://django-simple-history.readthedocs.io/en/latest/
+        return f"Ticket {self.id}" # by {self.request_user.username}
 
 
 class TicketComments(TimeStampedModel):
@@ -116,8 +129,9 @@ class Documents(TimeStampedModel):
 
     def __str__(self):
         return f"Document for Ticket {self.ticket.id}"
-        
 
+'''
+        
 class RecurringTicket(TimeStampedModel):
     FREQUENCY_CHOICES = [
         ('minutely', 'Minutely'),
@@ -145,5 +159,4 @@ class RecurringTicket(TimeStampedModel):
 
     def __str__(self):
         return f"Recurring Ticket by {self.employee.employee.username} - {self.frequency}"
-
-
+'''

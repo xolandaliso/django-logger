@@ -1,0 +1,32 @@
+{% extends 'tickets/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Manage Tickets{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mt-5">
+                <div class="card-header" style="color: dimgrey;">Manage Tickets</div>
+                <div class="card-body">
+                    {% if tickets %}
+                        <div class="list-group">
+                            {% for ticket in tickets %}
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <h5 class="mb-1">Ticket {{ ticket.id }}</h5>
+                                    <p class="mb-1">Description: {{ ticket.ticket_description }}</p>
+                                    <small>Created at: {{ ticket.created_at }}</small>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <p>No tickets found.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
