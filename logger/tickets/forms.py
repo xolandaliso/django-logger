@@ -1,9 +1,10 @@
+from ast import arg
 from dataclasses import fields
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit, Field
-from .models import CustomUser, Department, Ticket, Employee, Documents, Location, Type
+from .models import CustomUser, Department, Ticket, Employee, Documents, Location, TicketComments, Type
 
 class CustomUserForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
@@ -34,7 +35,6 @@ class CustomUserForm(UserCreationForm):
         return user
 
 class TicketForm(forms.ModelForm):
-
     class Meta:
         model = Ticket
         fields = [ 
@@ -54,4 +54,18 @@ class TicketForm(forms.ModelForm):
             Field('ticket_type', css_class='form-control'),
             Field('location', css_class='form-control'),
             Field('employee', css_class='form-control'),
+        )
+
+class TicketFormComments(forms.ModelForm):
+    class Meta:
+        model = TicketComments
+        fields = ['comment']
+
+        def __init__(self, *args, **kwargs):
+            super(TicketFormComments, self).__init__(*args, **kwargs)
+            self.helper = FormHelper()
+            self.helper.form_method = 'post'
+            self.helper.layout = Layout(
+                Field('comment', css_class='form-control', rows=3),
+                Submit('submit', 'Add Comment', css_class='btn btn-primary mt-2')
         )
