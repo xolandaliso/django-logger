@@ -1,14 +1,14 @@
 {% extends 'tickets/base.html' %}
 {% load crispy_forms_tags %}
 
-{% block title %}Manager Home - Your Website{% endblock %}
+{% block title %}Department selection{% endblock %}
 
 {% block content %}
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card mt-5">
-                    <div class="card-header" style="color: dimgrey;">Select Department</div>
+                    <div class="card-header" style="color: dimgrey;">Create New Ticket for department</div>
                     <div class="card-body">
                         <div class="row">
                             {% for department in departments %}
@@ -21,5 +21,7 @@
                 </div>
             </div>
         </div>
+        <div class="row justify-content-center" hx-get="{% url 'get_manage_tickets' %}" hx-trigger="load">
+            </div>
     </div>
 {% endblock %}
