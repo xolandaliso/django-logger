@@ -1,6 +1,6 @@
 from multiprocessing import context
 import re
-from .forms import TicketForm, CustomUserForm, TicketFormComments
+from .forms import TicketForm, CustomUserForm, TicketCommentsForm
 from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import UserCreationForm
@@ -8,6 +8,13 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Department, Employee, Type, Ticket
 from django.contrib import messages
+from django.http import JsonResponse
+from django.urls import reverse
+from django.http import HttpResponseRedirect
+from django.template.loader import render_to_string
+from django.utils import timezone
+
+
 
 '''
 landing
@@ -31,6 +38,9 @@ registration, login and logout
 home might be deleted later
 '''
 
+def check_employee_status(user):
+    return Employee.objects.filter(employee=user).exists()
+
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -38,7 +48,9 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
+            request.session['is_employee'] = check_employee_status(user)
             return redirect('department_selection')  # redirect to the home view
+
         else:
             # handle invalid login attempt
             context = {'error': 'Invalid username or password'}
@@ -127,9 +139,9 @@ ticket management views
 @login_required
 def manage_tickets(request):
     tickets = Ticket.objects.filter(request_user=request.user)
-    ticket_comments = TicketFormComments()
+    ticket_comments = TicketCommentsForm()
     if request.method == 'POST':
-        form = TicketFormComments(request.POST)
+        form = TicketCommentsForm(request.POST)
         if form.is_valid():
             comment = form.save(commit=False)
             comment.user = request.user
@@ -146,7 +158,7 @@ def manage_tickets(request):
 @login_required
 def get_manage_tickets(request):
     tickets = Ticket.objects.filter(request_user=request.user)
-    ticket_comments = TicketFormComments()
+    ticket_comments = TicketCommentsForm()
     context = {
         'tickets': tickets,
         'comment_form':ticket_comments
@@ -156,7 +168,7 @@ def get_manage_tickets(request):
 @login_required
 def create_ticket(request):
     if request.method == 'POST':
-        form = TicketForm(request.POST)
+        form = TicketForm(request.POST, request.FILES)
         if form.is_valid():
             try:
                 # save the ticket form data to session
@@ -180,6 +192,7 @@ def ticket_created(request):
     }
     return render(request, 'tickets/ticket_created.html', context)
 
+'''
 @login_required
 def ticket_update(request, pk):
     ticket = get_object_or_404(
@@ -207,6 +220,27 @@ def ticket_update(request, pk):
         'form':form
     }
     return render( request, 'tickets/ticket_update.html', context)
+'''
+
+@login_required
+def ticket_update(request, pk):
+    ticket = get_object_or_404(Ticket, pk=pk, request_user=request.user)
+    department = ticket.employee.department
+    
+    if request.method == 'POST':
+        form = TicketForm(request.POST, request.FILES, instance=ticket, department=department)
+        if form.is_valid():
+            ticket = form.save(commit=False)
+            #ticket.updated_at = timezone.now()  # Set the updated_at timestamp
+            ticket.save()
+            return redirect('manage_tickets')  # Redirect to the manage_tickets view upon successful update
+    else:
+        form = TicketForm(instance=ticket, department=department)
+    
+    context = {
+        'form': form,
+    }
+    return render(request, 'tickets/ticket_update.html', context)
 
 @login_required
 def ticket_delete(request, pk):
@@ -223,3 +257,88 @@ def ticket_delete(request, pk):
             'ticket': ticket
     }
     return render(request, 'tickets/ticket_delete.html', context)
+
+
+'''
+ticket comments
+'''
+
+@login_required
+def ticket_detail(request, pk):
+    ticket = get_object_or_404(Ticket, pk=pk)
+    comments = ticket.comments.all()
+    comment_form = TicketCommentsForm()
+
+    if request.method == 'POST':
+        form = TicketCommentsForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.user = request.user
+            comment.ticket = ticket
+            comment.save()
+            return HttpResponseRedirect(reverse('ticket_detail', args=[pk]))
+
+    context = {
+        'ticket': ticket,
+        'comments': comments,
+        'comment_form': comment_form,
+    }
+    return render(request, 'tickets/ticket_detail.html', context)
+
+@login_required
+def add_comment(request, ticket_id):
+    print(f'\n the request {request.method} \n')  # This should now print "POST" if form submission is successful
+    ticket = get_object_or_404(Ticket, id=ticket_id)
+
+    if request.method == 'POST':
+        form = TicketCommentsForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.user = request.user
+            comment.ticket = ticket
+            comment.save()
+            messages.success(request, 'Comment added successfully.')
+
+            comments = ticket.comments.all()  # Get updated comments
+            context = {'comments': comments, 'ticket': ticket}
+
+            return render_to_string('tickets/partials/comment.html', context, request=request)
+
+        else:
+            messages.error(request, 'Failed to add comment. Please check the form.')
+
+    return JsonResponse({'error': 'Invalid request method or comment form error'})
+
+@login_required
+def employee_dashboard(request):
+    user = request.user
+    try:
+        employee = Employee.objects.get(employee=user)
+        if employee.role == 'manager':
+            # managers see all tickets in their department
+            assigned_tickets = Ticket.objects.filter(employee__department=employee.department)
+        else:
+            # staff and interns see only their assigned tickets
+            assigned_tickets = Ticket.objects.filter(employee=employee)
+    except Employee.DoesNotExist:
+        assigned_tickets = []
+
+    context = {
+        'assigned_tickets': assigned_tickets
+    }
+    return render(request, 'tickets/employee_dashboard.html', context)
+
+def myticket_counts(request):
+    user = request.user
+    tickets = Ticket.objects.filter(request_user=user)
+    if tickets.count() > 0:
+
+        return HttpResponse(
+        f'''<span hx-get="/myticket_counts" hx-swap="outerHTML" hx-trigger="every 60s" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{tickets.count()}</span>'''
+ )
+
+    else:
+        return HttpResponse(
+        f'''<span hx-get="/myticket_counts" hx-swap="outerHTML" hx-trigger="every 60s"></span>'''
+ )
+
