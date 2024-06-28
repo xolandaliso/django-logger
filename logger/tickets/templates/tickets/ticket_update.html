@@ -1,10 +1,23 @@
 {% extends "tickets/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Update Ticket{% endblock %}
 
 {% block content %}
-  <h2>Update Ticket</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Update</button>
-  </form>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mt-5">
+                    <div class="card-header" style="color: dimgrey;">Update Ticket</div>
+                    <div class="card-body">
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <button type="submit" class="btn btn-secondary mt-2">Update</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

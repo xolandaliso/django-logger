@@ -4,17 +4,4 @@
 
 {% block content %}
 {% include "tickets/partials/get_manage_tickets.html" %}
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const ticketItems = document.querySelectorAll('.ticket-item');
-
-    ticketItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const commentsContainer = item.querySelector('.comments-container');
-            commentsContainer.style.display = (commentsContainer.style.display === 'none' || commentsContainer.style.display === '') ? 'block' : 'none';
-        });
-    });
-});
-</script>
-
 {% endblock %}
