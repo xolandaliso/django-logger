@@ -40,6 +40,11 @@ class CustomUser(AbstractUser, TimeStampedModel):
 
     def __str__(self):
         return self.username 
+    '''
+    def open_tickets(self):
+        open_tickets = Ticket.objects.filter()
+    def assigned_tickets():
+    '''
                
 class Department(TimeStampedModel):
 
