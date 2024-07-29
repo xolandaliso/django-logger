@@ -2,7 +2,8 @@
 
 from tracemalloc import stop
 from django.db import models
-from django.contrib.auth.models import AbstractUser, Group, Permission
+from django.conf import settings
+from django.contrib.auth.models import AbstractUser, Group, Permission, User
 
 class TimeStampedModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
@@ -50,8 +51,10 @@ class Department(TimeStampedModel):
 
     department_name = models.CharField(max_length=255)
     employees = models.ManyToManyField( 
-                        'CustomUser', through='Employee', \
-                             related_name='departments' )
+                    'CustomUser', 
+                    through='Employee', 
+                    related_name='departments'
+    )
 
     def __str__(self):
 
@@ -59,10 +62,10 @@ class Department(TimeStampedModel):
 
 class Employee(TimeStampedModel):
     ROLE_CHOICES = [
-        ('manager', 'Manager'),
+        ('manager', 'Manager'), 
         ('staff', 'Staff'),
         ('intern', 'Intern'),
-        # Add other roles as needed
+        ('super_manager', 'Super Manager')       #newly added
     ]
    
     employee = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='employee_roles')
@@ -77,11 +80,9 @@ class Type(models.Model):
     type_description = models.CharField(max_length=255)
     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='department_type')
 
-
     def __str__(self):
         return self.type_description
         
-
 class Resolution(models.Model):
     resolution_description = models.CharField(max_length=255)
     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='department_resolution')
@@ -91,10 +92,18 @@ class Resolution(models.Model):
         return self.resolution_description
 
 class Status(models.Model):
-    status_description = models.CharField(max_length=255)
+
+    STATUS_CHOICES = [
+        ('open', 'Open'),
+        ('in_progress', 'In Progress'),
+        ('closed', 'Closed'),
+    ]
+
+    status_description = models.CharField(max_length=255, choices=STATUS_CHOICES)
     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='department_status')
 
-
+    class Meta:
+        unique_together = ('status_description', 'department')  
 
     def __str__(self):
         return self.status_description
@@ -108,17 +117,24 @@ class Location(models.Model):
         return self.location_name       
  
 class Ticket(TimeStampedModel):
+
     request_user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='requested_tickets')
     employee = models.ForeignKey(Employee, on_delete=models.CASCADE, related_name='assigned_tickets')
     ticket_description = models.TextField()
     ticket_type = models.ForeignKey(Type, on_delete=models.CASCADE, related_name='tickets', null=True, blank=True)
-    #ticket_resolution = models.ForeignKey(Resolution, on_delete=models.CASCADE, related_name='tickets', null=True, blank=True)
-    #ticket_status = models.ForeignKey(Status, on_delete=models.CASCADE, related_name='tickets', null=True, blank=True)
+    ticket_resolution = models.ForeignKey(Resolution, on_delete=models.CASCADE, related_name='tickets', null=True, blank=True)
+    ticket_status = models.ForeignKey(Status, on_delete=models.CASCADE, related_name='tickets', null=True, blank=True)
     location = models.ForeignKey(Location, on_delete=models.CASCADE, related_name='tickets', null=True, blank=True)
 
     def __str__(self):
         return f"Ticket {self.id}" # by {self.request_user.username}
-
+    '''
+    def save(self, *args, **kwargs):
+        if not self.pk and not self.ticket_status:
+            open_status = Status.objects.get(status_description='open')
+            self.ticket_status = open_status
+        super().save(*args, **kwargs)
+    '''
 
 class TicketComments(TimeStampedModel):
     ticket = models.ForeignKey(Ticket, on_delete=models.CASCADE, related_name='comments')
