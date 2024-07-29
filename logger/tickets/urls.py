@@ -25,7 +25,13 @@ htmx_urlpatterns = [
     path('get_manage_tickets/', views.get_manage_tickets, name='get_manage_tickets'),
     path('ticket/<int:pk>/', views.ticket_detail, name='ticket_detail'),
     path('ticket/<int:ticket_id>/add_comment/', views.add_comment, name='add_comment'),
-    path('mytickets_counts/', views.myticket_counts, name='myticket_counts')
+    path('mytickets_counts/', views.myticket_counts, name='myticket_counts'),
+    path('assign_ticketcounts/', views.assign_ticketcounts, name='assign_ticketcounts'),
+    path('department/ticket_stats/', views.department_ticket_stats, name='department_ticket_stats'),
+    path('department/tickets/', views.tickets_by_status, name='tickets_by_status'),
+    path('ticket/<int:pk>/reopen/', views.ticket_reopen, name='ticket_reopen'),
+    path('department/open_tickets_over_5_days/', views.open_tickets_over_5_days, name='open_tickets_over_5_days'),
+    path('department/manager_open_tickets_over_5_days/', views.manager_open_tickets_over_5_days, name='manager_open_tickets_over_5_days'),
 
 ]
 
