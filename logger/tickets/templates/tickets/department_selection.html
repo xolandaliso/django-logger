@@ -21,7 +21,6 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center" hx-get="{% url 'get_manage_tickets' %}" hx-trigger="load">
-            </div>
+        {% include "tickets/partials/get_manage_tickets.html" %}
     </div>
 {% endblock %}

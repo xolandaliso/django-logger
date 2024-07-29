@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Ticket Tracking Platform{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vWbME4TNgIyaBbIjA81iZ8gOPLoO8fMMlSsHNwxEFXQA3GygYihro7BDikJOymFmLzINsbpeCoJfBfxaYg8OA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     {% block extra_head %}{% endblock %}
 
@@ -40,60 +42,15 @@
             max-width: 100%;
         }
 
-
+        .nav-item {
+            margin-right: 10px; /* Add space between nav items */
+        }
     </style>
 </head>
 <body>
-
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="{% url 'landing' %}" style="color: dimgrey;">
-                <img src="{% static 'img/2aday-circle.png' %}" alt="Company Logo" height="70" class="mr-2">
-                Ticket Tracking Portal
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <span class="nav-link" style="color:green">Welcome, {{ user.first_name }}</span>
-                    </li>
-                    {% if request.session.is_employee %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'employee_dashboard' %}">
-                                Assigned Tickets
-                            </a>
-                        </li>
-                    {% endif %} 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'manage_tickets' %}">
-                            Manage Tickets 
-                            <span hx-get="{% url 'myticket_counts' %}" 
-                                  hx-swap="outerHTML" hx-trigger="load, every 60s"
-                                  class="ticket-count-badge badge badge-pill badge-primary" 
-                                  style="padding: 5px 10px; margin-left: 10px; margin-right: 10px;" >
-                            </span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'register' %}">Register</a>
-                    </li>
-                    {% endif %}
-                </ul>
-            </div>
-        </div>
-    </nav>
+    {% include 'tickets/partials/navbar.html' %}
+    {% include 'tickets/partials/messages.html' %}
 
     {% block content %}
     <!-- Linking other pages here -->
@@ -104,5 +61,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/htmx.org@2.0.0" integrity="sha384-wS5l5IKJBvK6sPTKa2WZ1js3d947pvWXbPJ1OmWfEuxLgeHcEbjUUA5i9V5ZkpCw" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/htmx.org@1.6.1"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-vWbME4TNgIyaBbIjA81iZ8gOPLoO8fMMlSsHNwxEFXQA3GygYihro7BDikJOymFmLzINsbpeCoJfBfxaYg8OA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </body>
 </html>

@@ -1,24 +1,24 @@
 {% extends 'tickets/base.html' %}
-{% load crispy_forms_tags %}
-
 
 {% block title %}Create Ticket{% endblock %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card mt-5">
-                    <div class="card-header" style="color: dimgrey;">Create Ticket for {{ department.department_name }}</div>
-                    <div class="card-body">
-                        <form method="post" enctype="multipart/form-data">
-                            {% csrf_token %}
-                            {{ form|crispy }}
-                            <button type="submit" class="btn btn-secondary btn-block mt-4">Submit</button>
-                        </form>
-                    </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mt-5">
+                <div class="card-header">Create Ticket</div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button type="submit" class="btn btn-secondary">Create Ticket</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}

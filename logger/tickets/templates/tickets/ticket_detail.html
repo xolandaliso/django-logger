@@ -13,9 +13,13 @@
                 <div class="card-body">
                     <h5>Description:</h5>
                     <p>{{ ticket.ticket_description }}</p>
-                    <small>Created at: {{ ticket.created_at }}</small>
+                    <small>Created by: {{ ticket.request_user.get_full_name }}</small> @
+                    <small> {{ ticket.created_at }}</small>
+                    <br>
+                    <small>Status: {{ ticket.ticket_status.status_description }}</small>
                     <hr>
-                    <h6>Attachments:</h6>
+                    <h6>Attachments:</h6>   
+                    
                     {% if ticket.document %}
                         <ul>
                             {% for document in ticket.document.all %}
