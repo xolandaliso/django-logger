@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from django.contrib.messages import constants as messages
 
 # build paths inside the project like this: BASE_DIR / 'subdir'.
 
@@ -24,8 +25,11 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'logger',
     'tickets',
-    'crispy_forms',
     'crispy_bootstrap4',
+    'crispy_forms',
+    'django_htmx',
+    'debug_toolbar'
+
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -39,6 +43,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_htmx.middleware.HtmxMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware'
 ]
 
 ROOT_URLCONF = 'logger.urls'
@@ -123,3 +129,24 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+#message settings
+
+MESSAGE_TAGS = {
+        messages.DEBUG: 'alert-secondary',
+        messages.INFO: 'alert-info',
+        messages.SUCCESS: 'alert-success',
+        messages.WARNING: 'alert-warning',
+        messages.ERROR: 'alert-danger',
+}
+
+#email notification settings
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'xola.ndaliso@gmail.com' 
+EMAIL_HOST_PASSWORD = 'slde ooav qmpr nbwi'
+DEFAULT_FROM_EMAIL = 'xola.ndaliso@gmail.com'  
+EMAIL_FROM_NAME = 'TAD Ticket Portal'  
